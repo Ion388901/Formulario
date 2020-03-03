@@ -1,0 +1,118 @@
+.hero {
+  height: 120vh;
+  min-height: 620px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  transition: all ease-in-out 0.4s;
+  text-align: center;
+
+  .hero_content {
+    position: absolute;
+    width: 100%;
+}
+
+  .hero--title {
+    color: inherit;
+    font-weight: 300;
+    margin-bottom: 25px;
+    font-size: 52px;
+    line-height: 1.1;
+  }
+
+  .hero--desc {
+    color: inherit;
+    font-size: 18px;
+  }
+
+  .btn {
+    margin-top: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .down--btn {
+    border: 2px solid #fff;
+    height: 40px;
+    width: 24px;
+    display: block;
+    z-index: 10;
+    position: absolute;
+    bottom: 22vh;
+    left: 0;
+    right: 0;
+    opacity: 0.7;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, .5);
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    border-radius: 16px;
+
+    .wheel {
+      background-color: #ffffff !important;
+      position: relative;
+      width: 2px;
+      height: 6px;
+      top: 4px;
+      margin-left: auto;
+      margin-right: auto;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      -webkit-animation-name: mouse-anim-drop;
+      -webkit-animation-duration: 1s;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-delay: 0s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-play-state: running;
+      -webkit-animation-name: mouse-anim-drop;
+      animation-name: mouse-anim-drop;
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-timing-function: linear;
+      animation-timing-function: linear;
+      -webkit-animation-delay: 0s;
+      animation-delay: 0s;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-play-state: running;
+      animation-play-state: running;
+    }
+  }
+
+
+  @-webkit-keyframes mouse-anim-drop {
+    0% {
+      top: 5px;
+      opacity: 0;
+    }
+
+    30% {
+      top: 10px;
+      opacity: 1;
+    }
+
+    100% {
+      top: 25px;
+      opacity: 0;
+    }
+  }
+
+  @keyframes mouse-anim-drop {
+    0% {
+      top: 5px;
+      opacity: 0;
+    }
+
+    30% {
+      top: 10px;
+      opacity: 1;
+    }
+
+    100% {
+      top: 25px;
+      opacity: 0;
+    }
+  }
+}

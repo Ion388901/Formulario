@@ -1,0 +1,45 @@
+/**
+ * Breadcrumb Area
+ */
+
+.breadcrumb-area {
+    padding: 410px 0 50px 0;
+    .heading {
+        margin-bottom: 5px;
+        text-align: center;
+        h2 {
+            color: $white;
+            b {
+                color: $white;
+            }
+        }
+    }
+    .breadcrumb {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        padding: 0.75rem 1rem;
+        margin-bottom: 1rem;
+        list-style: none;
+        background-color: transparent;
+        border-radius: 0.25rem;
+        .breadcrumb-item {
+            color: $white;
+            a {
+                color: $white;
+            }
+            &.active {
+                color: $white;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    display: inline-block;
+    padding-right: .5rem;
+    color: $white;
+    content: "/";
+}

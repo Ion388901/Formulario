@@ -1,0 +1,80 @@
+.sectiontitle{
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  text-align: center;
+  .sectiontitle--subtitle{
+    margin-bottom: 0;
+    line-height: 1;
+    font-size: 13px;
+    span{
+      margin-bottom: 5px;
+      display: inline-block;
+      position: relative;
+      text-transform: uppercase;
+      &:before {
+        content: '';
+        display: block;
+        height: 1px;
+        width: 45px;
+        background-color: $primary;
+        position: absolute;
+        left: -50px;
+        top: 7px;
+      }
+      &:after {
+        content: '';
+        display: block;
+        height: 1px;
+        width: 45px;
+        background-color: $primary;
+        position: absolute;
+        right: -50px;
+        top: 7px;
+      }
+    }
+  }
+  .sectiontitle--name{
+    margin-bottom: 5px;
+    color: $black;
+    text-transform: capitalize;
+  }
+  .sectiontitle--text{
+    font-size: 18px;
+  }
+
+  &.text--left{
+    text-align: left;
+    .sectiontitle--subtitle{
+      span{
+        &:before {
+          content: none;
+        }
+      }
+    }
+  }
+}
+
+.sectiontitle--two{
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  text-align: center;
+  .sectiontitle--icon{
+    font-size: 48px;
+    margin-bottom: 15px;
+    color: $primary;
+  }
+  .sectiontitle--name{
+    margin-bottom: 15px;
+    color: $black;
+    text-transform: capitalize;
+  }
+  .sectiontitle--text{
+    font-size: 16px;
+  }
+
+  &.text--left{
+    text-align: left;
+  }
+}

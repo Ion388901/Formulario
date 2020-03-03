@@ -1,0 +1,65 @@
+.testimonialbox-one{
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 5em;
+  border-radius: 10px;
+  svg{
+    max-width: 75px;
+    fill: $white;
+  }
+  .testimonialbox--p{
+    color: $white;
+    font-size: 16px;
+    line-height: 1.7;
+    padding: 50px;
+    font-weight: 600;
+  }
+  .testimonialbox--name{
+    color: $white;
+    margin: 15px 0 0;
+    text-transform: capitalize;
+    span{
+      text-transform: capitalize;
+      color: $secondary;
+      font-weight: 500;
+      font-size: 13px;
+      padding: 9px;
+      background: $white;
+      margin-left: 11px;
+    }
+  }
+  .testimonialbox--img{
+    text-align: center;
+    margin: 0 auto;
+   img{
+     margin: 0 auto;
+     border-radius: 50px;
+     width: 75px;
+     border: solid 2px $primary;
+   }
+  }
+}
+
+.owl-carousel .owl-dots .owl-dot span {
+  width: 5px;
+  height: 5px;
+  margin: 5px;
+  background: $primary;
+  display: block;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  -webkit-backface-visibility: visible;
+  border-radius: 30px;
+}
+.owl-carousel .owl-dots .owl-dot.active span{
+  background-color: $primary;
+  -webkit-transform: scaleY(1.1);
+  transform: scaleY(1.1);
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.owl-theme .owl-nav.disabled+.owl-dots {
+  margin-top: -30px;
+}

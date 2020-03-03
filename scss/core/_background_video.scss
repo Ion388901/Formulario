@@ -1,0 +1,133 @@
+/* ===================================
+    Background Video
+====================================== */
+
+.king-full-video-area {
+    position: relative;
+    height: 100vh;
+    video {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: auto;
+        height: auto;
+        min-height: 100%;
+        min-width: 100%;
+        z-index: -100;
+    }
+    .king-content {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+}
+
+/* ===================================
+   Section background video
+====================================== */
+
+.section-bg-video {
+    position: relative;
+    overflow: hidden;
+    max-height: 800px;
+    .container-video {
+        position: absolute;
+        z-index: 3;
+        width: 100%;
+        height: 100%;
+    }
+    .bg-overlay {
+        background-repeat: repeat;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 2;
+    }
+    .transparent-dark {
+        opacity: 0.8;
+    }
+    .heading-white {
+        margin-bottom: 0;
+        .sub-heading {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.curve {
+    position: absolute;
+    z-index: 7;
+    &.curve-center {
+        &:after {
+            border-left: 50vw solid transparent;
+        }
+        &:before {
+            border-right: 50vw solid transparent;
+        }
+        &.curve-top {
+            &:after {
+                border-left: 50vw solid transparent;
+            }
+            &:before {
+                border-right: 50vw solid transparent;
+            }
+        }
+    }
+    &.curve-bottom {
+        left: 0;
+        bottom: -1px;
+        width: 100%;
+        &:after,
+        &:before {
+            bottom: 0;
+        }
+    }
+    &.curve-top {
+        left: 0;
+        top: -1px;
+        width: 100%;
+        &:after,
+        &:before {
+            top: 0;
+            border-top: 50px solid #fff;
+            border-bottom: 0;
+        }
+        &:after {
+            border-left: 70vw solid transparent;
+        }
+        &:before {
+            border-right: 30vw solid transparent;
+        }
+    }
+    &.curve-gray-b {
+        &:after,
+        &:before {
+            border-bottom: 50px solid #f9f9f9;
+        }
+    }
+    &.curve-gray-t {
+        &:after,
+        &:before {
+            border-top: 50px solid #f9f9f9;
+        }
+    }
+    &:after,
+    &:before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-bottom: 50px solid #fff;
+        position: absolute;
+    }
+    &:after {
+        right: 0;
+        border-left: 30vw solid transparent;
+    }
+    &:before {
+        left: 0;
+        border-right: 70vw solid transparent;
+    }
+}

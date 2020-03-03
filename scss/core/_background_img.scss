@@ -1,0 +1,221 @@
+/* ===================================
+    Background image
+====================================== */
+
+.parallax {
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.fix-background {
+    position: relative;
+    background-size: cover;
+    animation-duration: 0s;
+    animation-fill-mode: none;
+    -webkit-animation-duration: 0s;
+    -webkit-animation-fill-mode: none;
+    -moz-animation-duration: 0s;
+    -moz-animation-fill-mode: none;
+    -ms-animation-duration: 0s;
+    -ms-animation-fill-mode: none;
+    -o-animation-fill-mode: none;
+    overflow: hidden;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.cover-background {
+    position: relative !important;
+    background-size: cover !important;
+    overflow: hidden !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+.bg-overlay {
+    background-color: $black;
+    opacity: 0.8;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+/* Background Images */
+
+.bg {
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-img {
+    width: 100vw;
+    min-height: 855px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0;
+    margin-top: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.split-blog-scale  {
+    transform: scale(1);
+    transition: 1s;
+}
+.split-blog-scale:hover  {
+    transform: scale(1.2);
+}
+
+/*-------------------------------------------------------
+          [ Overlay Effect Bg image ]
+-------------------------------------------------------*/
+
+[data-overlay-dark],
+[data-overlay-color],
+[data-overlay-light] {
+    position: relative;
+}
+
+[data-overlay-dark] .container,
+[data-overlay-color] .container,
+[data-overlay-light] .container {
+    position: relative;
+    color: #fff;
+    z-index: 2;
+}
+
+[data-overlay-dark]:before,
+[data-overlay-color]:before,
+[data-overlay-light]:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+[data-overlay-dark]:before {
+    background: #0b1520;
+}
+
+[data-overlay-color]:before {
+    background-color: $primary;
+}
+
+[data-overlay-light]:before {
+    background: #fff;
+}
+
+[data-overlay-dark] {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    span {
+        color: $white;
+    }
+
+    p {
+        color: $white;
+    }
+}
+
+[data-overlay-light] {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    span {
+        color: $text-geral;
+    }
+
+    p {
+        color: $text-geral;
+    }
+}
+
+[data-overlay-dark="0"]:before,
+[data-overlay-color="0"]:before,
+[data-overlay-light="0"]:before {
+    opacity: 0;
+}
+
+[data-overlay-dark="1"]:before,
+[data-overlay-color="1"]:before,
+[data-overlay-light="1"]:before {
+    opacity: 0.1;
+}
+
+[data-overlay-dark="2"]:before,
+[data-overlay-color="2"]:before,
+[data-overlay-light="2"]:before {
+    opacity: 0.2;
+}
+
+[data-overlay-dark="3"]:before,
+[data-overlay-color="3"]:before,
+[data-overlay-light="3"]:before {
+    opacity: 0.3;
+}
+
+[data-overlay-dark="4"]:before,
+[data-overlay-color="4"]:before,
+[data-overlay-light="4"]:before {
+    opacity: 0.4;
+}
+
+[data-overlay-dark="5"]:before,
+[data-overlay-color="5"]:before,
+[data-overlay-light="5"]:before {
+    opacity: 0.5;
+}
+
+[data-overlay-dark="6"]:before,
+[data-overlay-color="6"]:before,
+[data-overlay-light="6"]:before {
+    opacity: 0.6;
+}
+
+[data-overlay-dark="7"]:before,
+[data-overlay-color="7"]:before,
+[data-overlay-light="7"]:before {
+    opacity: 0.7;
+}
+
+[data-overlay-dark="8"]:before,
+[data-overlay-color="8"]:before,
+[data-overlay-light="8"]:before {
+    opacity: 0.8;
+}
+
+[data-overlay-dark="9"]:before,
+[data-overlay-color="9"]:before,
+[data-overlay-light="9"]:before {
+    opacity: 0.9;
+}
+
+[data-overlay-dark="10"]:before,
+[data-overlay-color="10"]:before,
+[data-overlay-light="10"]:before {
+    opacity: 1;
+}
+
+
+
+

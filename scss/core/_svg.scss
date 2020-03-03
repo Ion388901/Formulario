@@ -1,0 +1,25 @@
+.svg-abs {
+    position: absolute;
+}
+
+.svg-f-btm {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.svg-white {
+    fill: #fff;
+}
+
+.svg-f-top-invert {
+    top: -2px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+    transform: scale(-1);
+}
+

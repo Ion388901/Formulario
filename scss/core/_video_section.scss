@@ -1,0 +1,180 @@
+/* ===================================
+   Video Section
+====================================== */
+
+.video-content-setting {
+    max-width: 665px;
+    padding: 9rem 1rem 8rem;
+    margin: 0 auto;
+    h2 {
+      line-height: 1.2;
+    }
+  }
+  
+  .col-video {
+    height: 500px;
+    display: flex;
+    align-items: center;
+    padding: 55px;
+  }
+  
+  .video-play-button-column {
+    max-width: 70px;
+  }
+  
+  .video-play-button {
+    height: 70px;
+    width: 70px;
+    background: #ff1637;
+    display: inline-block;
+    top: 50%;
+    right: 0;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    line-height: 77px;
+    text-align: center;
+    color: #ffffff;
+    -webkit-box-shadow: 0 0 0 0 rgb(255, 255, 255);
+    box-shadow: 0 0 0 0 rgb(255, 255, 255);
+    z-index: 1;
+    -webkit-transform: translate(50%, -40%);
+    -ms-transform: translate(50%, -40%);
+    -o-transform: translate(50%, -40%);
+    transform: translate(50%, -40%);
+    &.slider-play-button {
+      margin: 10px;
+      -webkit-transform: translate(0%, 0%);
+      -ms-transform: translate(0%, 0%);
+      -o-transform: translate(0%, 0%);
+      transform: translate(0%, 0%);
+    }
+    &:hover, &:focus {
+      -webkit-animation: pulse_effect 1s infinite;
+      -o-animation: pulse_effect 1s infinite;
+      animation: pulse_effect 1s infinite;
+      background: #ffffff;
+      color: #ff1637;
+    }
+    i {
+      font-size: 20px;
+    }
+  }
+  
+  /* video button two */
+  
+  .video-play-button-small {
+    height: 50px;
+    width: 50px;
+    background: #ffffff;
+    display: inline-block;
+    border-radius: 50px;
+    line-height: 57px;
+    text-align: center;
+    color: #ff1637;
+    -webkit-box-shadow: 0 0 0 0 rgb(255, 255, 255);
+    box-shadow: 0 0 0 0 rgb(255, 255, 255);
+    z-index: 1;
+    &:hover, &:focus {
+      -webkit-animation: pulse_effect 1s infinite;
+      -o-animation: pulse_effect 1s infinite;
+      animation: pulse_effect 1s infinite;
+      background: #ffffff;
+      color: #ff1637;
+    }
+    i {
+      font-size: 20px;
+    }
+  }
+  
+  @-webkit-keyframes pulse_effect {
+    0% {
+      -webkit-box-shadow: 0 0 0 5px rgba(255, 22, 55, 0.9);
+      box-shadow: 0 0 0 5px rgba(255, 22, 55, 0.9);
+    }
+  
+    25% {
+      -webkit-box-shadow: 0 0 0 10px rgba(255, 22, 55, 0.6);
+      box-shadow: 0 0 0 10px rgba(255, 22, 55, 0.6);
+    }
+  
+    70% {
+      -webkit-box-shadow: 0 0 0 15px rgba(255, 22, 55, 0.3);
+      box-shadow: 0 0 0 15px rgba(255, 22, 55, 0.3);
+    }
+  
+    100% {
+      -webkit-box-shadow: 0 0 0 60px rgba(255, 22, 55, 0.1);
+      box-shadow: 0 0 0 20px rgba(255, 22, 55, 0.1);
+    }
+  }
+  
+  
+  @-o-keyframes pulse_effect {
+    0% {
+      box-shadow: 0 0 0 5px rgba(255, 22, 55, 0.9);
+    }
+  
+    25% {
+      box-shadow: 0 0 0 10px rgba(255, 22, 55, 0.6);
+    }
+  
+    70% {
+      box-shadow: 0 0 0 15px rgba(255, 22, 55, 0.3);
+    }
+  
+    100% {
+      box-shadow: 0 0 0 20px rgba(255, 22, 55, 0.1);
+    }
+  }
+  
+  
+  @keyframes pulse_effect {
+    0% {
+      -webkit-box-shadow: 0 0 0 3px rgba(255, 22, 55, 0.9);
+      box-shadow: 0 0 0 3px rgba(255, 22, 55, 0.9);
+    }
+  
+    25% {
+      -webkit-box-shadow: 0 0 0 6px rgba(255, 22, 55, 0.6);
+      box-shadow: 0 0 0 6px rgba(255, 22, 55, 0.6);
+    }
+  
+    70% {
+      -webkit-box-shadow: 0 0 0 9px rgba(255, 22, 55, 0.3);
+      box-shadow: 0 0 0 9px rgba(255, 22, 55, 0.3);
+    }
+  
+    100% {
+      -webkit-box-shadow: 0 0 0 12px rgba(255, 22, 55, 0.1);
+      box-shadow: 0 0 0 12px rgba(255, 22, 55, 0.1);
+    }
+  }
+  
+  
+  /* video mobile app */
+  
+  .app-image {
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    max-width: 554px;
+    max-height: 280px;
+    margin: 0 auto;
+    img {
+      max-height: 280px;
+      margin: 0 auto;
+      display: inline-block;
+    }
+  }
+  
+  .video-app {
+    position: absolute;
+    top: 8%;
+    max-height: 235px;
+    left: 12%;
+    max-width: 420px;
+    overflow: hidden;
+  }

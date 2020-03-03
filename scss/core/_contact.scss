@@ -1,0 +1,34 @@
+/* ===================================
+   Contact
+====================================== */
+
+
+
+
+
+
+
+.form-control:focus {
+    border-color: $primary;
+}
+
+.custom-select.is-invalid,
+.form-control.is-invalid,
+.was-validated .custom-select:invalid,
+.was-validated .form-control:invalid {
+    border: 1px solid;
+    border-color: #dc3545;
+}
+
+.newsletter {
+    .newsletter-text .form-control {
+        border-radius: 50px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    .newsletter-button {
+        text-align: center;
+    }
+}

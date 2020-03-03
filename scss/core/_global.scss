@@ -1,0 +1,390 @@
+
+
+body,
+html {
+  overflow-x: hidden;
+  direction: ltr;
+  text-align: left;
+}
+
+html {
+  font-size: 13px;
+}
+.page-warp{
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+.parallax-window {
+  min-height: 400px;
+  background: transparent;
+}
+.parallax-mirror{
+  z-index: 1 !important;
+}
+.fluid-section--left{
+  padding-left: 8% !important;
+  padding-right: 30px !important;
+  @include tablet{
+    padding: 0 !important;
+  }
+}
+.fluid-section--right{
+  padding-right: 5% !important;
+  padding-left: 30px !important;
+}
+//overlay
+.overlay{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  &.overlay--dark{
+    background-color: rgba($black,0.6);
+  }
+}
+.bg-light {
+  background-color: #ffffff!important;
+}
+body {
+  background-color: #ffffff;
+  font-family: $body_font;
+  font-size: 13px;
+  font-weight: 400;
+  color: #a0a0ba;
+  line-height: 1.5;
+  margin: 0;
+}
+* {
+  outline: none;
+}
+
+::selection {
+  background-color: $primary;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+a {
+  color: $primary;
+  @include single-transition(all,0.3s, ease-in-out);
+}
+
+a:hover {
+  color: $dark;
+  text-decoration: none;
+  @include single-transition(all,0.3s, ease-in-out);
+}
+
+a:focus {
+  color:$dark;
+  outline: none;
+  text-decoration: none;
+  @include single-transition(all,0.3s, ease-in-out);
+}
+
+a:active {
+  color:$dark;
+  outline: none;
+  text-decoration: none;
+  @include single-transition(all,0.3s, ease-in-out);
+}
+
+
+
+.notfound--panner{
+  min-height: 70vh;
+}
+
+.border-bottom-light{
+  border: solid 1px transparent;
+}
+.border-none{
+  border: 0 !important;
+}
+.rounded-default{
+  border-radius: 5px !important;
+}
+.rounded-sm{
+  border-radius: 3px !important;
+}
+.rounded-md{
+  border-radius: 10px !important;
+}
+.rounded{
+  border-radius: 100px !important;
+}
+
+
+/* ----------------general classes------------------- */
+.feature-imgs{
+  img{
+    margin: 10px;
+    border-radius: 5px;
+  }
+}
+.fluid-right{
+  padding-right: 5%;
+}
+.fluid-left{
+  padding-left: 5%;
+}
+
+/* ----------------list------------------- */
+.arrow-list{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  li{
+    padding: 5px 0;
+    i{
+      color: $primary;
+      padding: 0 10px 0 0;
+    }
+    span{
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+}
+
+/* ---------------- Tables ------------------ */
+table {
+  border-collapse: collapse;
+}
+table th+th, table th+td, table td+th, table td+td {
+  border-left: 1px solid #ddd;
+}
+table > p {
+  margin: 0 !important;
+}
+table th {
+  padding: 1.4em 1em;
+  letter-spacing: 1px;
+}
+table td {
+  padding: 1.4em 1em;
+  font-size: 0.938em;
+}
+table th {
+  text-transform:uppercase;
+  text-align: center;
+}
+caption {
+  font-weight: 700;
+  text-align: center;
+}
+
+
+/* ---------------- Blockquotes ------------------ */
+
+blockquote {
+  position:relative;
+  text-align:left;
+  padding: 0 0 0 2em;
+}
+
+
+/* ---------------- Html Tags ------------------ */
+
+dd {
+  margin-left: 1.5em;
+}
+dt, b, strong {
+  font-weight: bold;
+}
+dfn, em, i {
+  font-style: italic;
+}
+
+pre, code, kbd, tt, var, samp {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1em;
+  letter-spacing:0;
+}
+pre {
+  overflow: auto;
+  max-width: 100%;
+}
+code {
+  overflow: auto;
+  max-width: 100%;
+  padding: 0 1em;
+  background-color: #f7f7f7;
+  display: inline-block;
+  vertical-align: middle;
+  word-wrap:break-word;
+}
+pre > code {
+  display: block;
+  vertical-align: top;
+  padding: 1em;
+}
+abbr, acronym {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+mark, ins {
+  background-color:transparent;
+  text-decoration: none;
+}
+sup,
+sub {
+  font-size: 75%;
+  height: 0;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup { bottom: 1ex; }
+sub { top: .5ex; }
+
+
+/* ---------------- Images ------------------ */
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align:top;
+}
+/* ---------------- Audio and Video ------------------ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+iframe, video, embed {
+  max-width: 100%;
+  min-height: 100px;
+  vertical-align: top;
+}
+
+.small-container{
+  max-width: 1000px;
+}
+.map--select {
+  border-radius: 5px;
+  overflow: hidden;
+  iframe {
+    width: 100%;
+    min-height: 400px;
+    border: 0;
+    box-shadow: 0 0 0;
+  }
+}
+/* ---------------- "margin helpers" and "padding helpers"  ------------------ */
+$spaceamounts: (5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 75, 100);
+$sides: (top, bottom, left, right);
+
+@each $space in $spaceamounts{
+  @each $side in $sides{
+    .m#{str-slice($side, 0, 1)}#{$space} {
+      margin-#{$side}: #{$space}px !important;
+    }
+
+    .p#{str-slice($side, 0, 1)}#{$space} {
+      padding-#{$side}: #{$space}px !important;
+    }
+  }
+}
+
+
+.shape-style-one{
+  position: absolute!important;
+  z-index: 4!important;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.shape-style-two{
+  position: absolute!important;
+  z-index: 4!important;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.waves{
+  position: absolute!important;
+  bottom: -10px;
+  width: 100%;
+  fill: #fff;
+  height: 160px;
+  left: 0;
+  right: 0;
+  path:first-child{
+    opacity: .1;
+  }
+  path:nth-child(2){
+    opacity: .5;
+  }
+  path:last-child{
+    opacity: 1;
+  }
+}
+.container-radius{
+  border-radius: 20px;
+  padding: 50px;
+}
+.brand-item {
+  max-width: 120px;
+  margin: 0 auto;
+  height: 120px;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  filter: grayscale(100%);
+  transition: all 0.3s ease-in-out;
+  opacity: .5;
+  &:hover{
+    filter: grayscale(0);
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+  }
+}
+.owl-carousel .owl-item img {
+  display: block;
+  max-width: 100%;
+  width: auto;
+}
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+.p-relative{
+  position: relative;
+  overflow: hidden;
+}
+
+.side--wave{
+  position: absolute;
+  top: -20%;
+  bottom: 0;
+  width: 100%;
+  right: -30%;
+  z-index: -1;
+  svg{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    min-width: 70%;
+    path{
+      fill: rgba(46, 56, 71, 0.03);
+    }
+  }
+}

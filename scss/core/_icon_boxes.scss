@@ -1,0 +1,208 @@
+.icon-box{
+  padding: 60px 30px;
+  border-radius: 5px;
+  margin: 15px 0;
+  background-color: #ffffff;
+  @include box-shadow(0,4px,40px,0 , rgba(22, 52, 75, 0.05)) ;
+  cursor: pointer;
+  position: relative;
+  @include single-transition(all,0.3s, ease-in-out);
+  .icon-box--img{
+    width: 75px;
+    background-color: $primary;
+    padding: 15px;
+    border-radius: 50px;
+    border-bottom-right-radius: 5px;
+    margin-bottom: 25px;
+    @include single-transition(all,0.3s, ease-in-out);
+    svg{
+      fill: $light;
+    }
+  }
+  .icon-box--title{
+    color: $dark;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  .icon-box--desc{
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+
+  &:hover{
+    @include box-shadow(0,4px,40px,0 , rgba(22, 52, 75, 0.08)) ;
+    transform: translateY(-5px);
+    @include single-transition(all,0.3s, ease-in-out);
+    .icon-box--img{
+      border-radius: 50px;
+      border-top-left-radius: 5px;
+      @include single-transition(all,0.3s, ease-in-out);
+    }
+  }
+}
+.icon-box-two{
+  text-align: center;
+  padding: 15px;
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  i {
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    color: #1f1f1f;
+    font-size: 64px;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+  .content{
+    h5 {
+      margin-bottom: 15px;
+      text-transform: capitalize;
+      color: #080708;
+    }
+    a {
+      text-transform: capitalize;
+      margin-top: 10px;
+      display: inline-block;
+    }
+  }
+}
+.icon-box-three{
+  padding: 60px 30px;
+  border-radius: 5px;
+  margin: 15px 0;
+  text-align: center;
+  background-color: #ffffff;
+  @include box-shadow(0,4px,40px,0 , rgba(22, 52, 75, 0.05)) ;
+  cursor: pointer;
+  position: relative;
+  @include single-transition(all,0.3s, ease-in-out);
+  .icon-box--img{
+    width: 90px;
+    height: 90px;
+    background-color: $primary;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    margin-right: auto;
+    margin-left: auto;
+    @include single-transition(all,0.3s, ease-in-out);
+    svg{
+      fill: light;
+    }
+  }
+  .icon-box--title{
+    color: $dark;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  .icon-box--desc{
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+
+  &:hover{
+    @include box-shadow(0,4px,40px,0 , rgba(22, 52, 75, 0.08)) ;
+    transform: translateY(-5px);
+    @include single-transition(all,0.3s, ease-in-out);
+    .icon-box--img{
+      border-radius: 10px;
+      @include single-transition(all,0.3s, ease-in-out);
+    }
+  }
+}
+.icon-box-four{
+  text-align: center;
+  padding: 15px;
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  i {
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    margin: 0;
+    display: inline-block;
+    line-height: 1;
+    margin-bottom: 20px;
+    width: 90px;
+    height: 90px;
+    background-color: $primary;
+    padding: 20px;
+    border-radius: 100px;
+    border-bottom-right-radius: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 45px;
+    color: #ffffff;
+  }
+  .content{
+    h5 {
+      margin-bottom: 15px;
+      text-transform: capitalize;
+      color: #080708;
+    }
+    a {
+      text-transform: capitalize;
+      margin-top: 10px;
+      display: inline-block;
+    }
+  }
+}
+
+.featureBox{
+  margin: 15px 0 ;
+  text-align: center;
+  padding: 15px 25px;
+  .featureBox--icon {
+    max-width: 75px;
+    height: 75px;
+    margin: 0 auto 25px;
+    svg , svg path ,polygon{
+      fill: $primary;
+    }
+  }
+  .featureBox--title {
+    margin-bottom: 10px;
+  }
+}
+.featureBox--two{
+  margin: 15px 0 ;
+  text-align: center;
+  padding: 15px 25px;
+  @include single-transition(all,0.3s, ease-in-out);
+  transform: translateY(0);
+  .featureBox--icon {
+    max-width: 75px;
+    height: 75px;
+    margin: 0 auto 25px;
+    svg , svg path ,polygon{
+      fill: $dark;
+    }
+  }
+  .featureBox--title {
+    margin-bottom: 10px;
+  }
+  &:hover{
+    @include single-transition(all,0.3s, ease-in-out);
+    transform: translateY(-3px);
+    .featureBox--icon {
+      max-width: 75px;
+      height: 75px;
+      margin: 0 auto 25px;
+
+      svg , svg path ,polygon{
+        fill: $primary;
+      }
+    }
+  }
+}
+

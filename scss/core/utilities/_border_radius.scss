@@ -1,0 +1,17 @@
+$spaceamounts: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 50, 100); // Adjust this to include the pixel amounts you need.
+$sides: (t, b, l, r); // Leave this variable alone
+@each $radius in $spaceamounts {
+    @each $side in $sides {
+        .br-#{$radius} {
+            border-radius: #{$radius}px !important;
+        }
+        .br-#{str-slice($side, 0, 1)}-#{$radius} {
+            border-bottom-right-radius: #{$radius}px !important;
+            border-bottom-left-radius: #{$radius}px !important;
+        }
+    }
+}
+
+.br-none {
+    border-radius: 0;
+}

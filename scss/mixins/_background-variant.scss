@@ -1,0 +1,63 @@
+// stylelint-disable declaration-no-important
+// Contextual backgrounds
+@mixin bg-variant($parent, $color) {
+    #{$parent} {
+        background-color: $color !important;
+    }
+    a#{$parent},
+    button#{$parent} {
+        @include hover-focus {
+            background-color: darken($color, 10%) !important;
+        }
+    }
+}
+
+@mixin gradient($from-color: $primary, $to-color: $secondary) {
+    background: $primary;
+    background-color: mix($from-color, $to-color);
+    /* Fallback */
+    -webkit-background: -webkit-linear-gradient(35deg, $from-color, $to-color, $to-color, $from-color);
+    -moz-background: linear-gradient(55deg, $from-color, $to-color, $to-color, $from-color);
+    background: -o-linear-gradient(35deg, $from-color, $to-color, $to-color, $from-color);
+    background: linear-gradient(55deg, $from-color, $to-color, $to-color, $from-color);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from-color', endColorstr='$to-color', GradientType=1);
+}
+
+@mixin gradient-2($from-color: $primary, $to-color: $secondary) {
+    background: $primary;
+    background-color: mix($from-color, $to-color);
+    /* Fallback */
+    -webkit-background: -webkit-linear-gradient(35deg, $from-color, $to-color);
+    -moz-background: linear-gradient(55deg, $from-color, $to-color);
+    background: -o-linear-gradient(35deg, $from-color, $to-color);
+    background: linear-gradient(55deg, $from-color, $to-color);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from-color', endColorstr='$to-color', GradientType=1);
+}
+
+@mixin gradientText($from-color: $primary, $to-color: $secondary) {
+    -webkit-background: -webkit-linear-gradient(35deg, $from-color, $to-color, $to-color, $from-color);
+    -moz-background: linear-gradient(55deg, $from-color, $to-color, $to-color, $from-color);
+     background: -o-linear-gradient(35deg, $from-color, $to-color, $to-color, $from-color);
+     background: linear-gradient(55deg, $from-color, $to-color, $to-color, $from-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        @content;
+    }
+    &::-moz-placeholder {
+        /* Firefox 19+ */
+        @content;
+    }
+    &:-ms-input-placeholder {
+        /* IE 10+ */
+        @content;
+    }
+    &:-moz-placeholder {
+        /* Firefox 18- */
+        @content;
+    }
+}

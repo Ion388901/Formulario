@@ -1,0 +1,40 @@
+// Button variants
+@mixin button-variant($background, $color) {
+    color: color-yiq($color) !important;
+    background: $background;
+    border-color: $background;
+    @include hover {
+        color: $background !important;
+        background: transparent !important;
+        border-color: $background;
+        i {
+            color: $color;
+        }
+    }
+    &:focus,
+    &.focus {
+        color: $background !important;
+        background: transparent !important;
+    }
+    i {
+        color: color-yiq($color);
+    }
+}
+
+@mixin button-outline-variant($color, $color-hover: color-yiq($color), $active-background: $color, $active-border: $color) {
+    color: $color;
+    background-color: transparent;
+    background-image: none;
+    border-color: $color;
+    &:hover {
+        color: $white !important;
+        background-color: $active-background;
+        border-color: $active-border;
+    }
+    &:focus,
+    &.focus {
+        color: $white;
+        background-color: $active-background;
+        border-color: $active-border;
+    }
+}

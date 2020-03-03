@@ -1,0 +1,147 @@
+
+
+.team-box{
+  max-width: 350px;
+  margin: 0 auto;
+  position: relative;
+  border: solid 2px #f7f7f7;
+  border-radius: 10px;
+  @include single-transition(all , 400ms , ease-in-out);
+  transform: translateY(0);
+  .team-box--img{
+    border-radius: 5px;
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .team-box--content{
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding: 15px;
+    text-align: center;
+  }
+  .team-box--name{
+    font-size: 18px;
+    color: #111111;
+    margin: 0;
+    padding-bottom: 5px;
+  }
+  .team-box--job{
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+    font-size: 13px;
+    font-weight: 500;
+    color: #5c636c;
+  }
+  .team-member-links{
+    left: 0;
+    position: absolute;
+    text-align: center;
+    bottom: 30px;
+    width: 100%;
+    z-index: 2;
+    a {
+      color: #FFF;
+      display: inline-block;
+      background: #080808;
+      width: 35px;
+      border-radius: 50px;
+      height: 35px;
+      line-height: 31px;
+      font-size: 16px;
+      padding: 3px;
+      text-align: center;
+      margin: 0 2px;
+    }
+    @for $i from 1 to 10 {
+      .icon-links a:nth-child(#{$i}) {
+        transform: translateY(-40px) scale(0);
+        -webkit-transition: all 800ms cubic-bezier(0.68,-0.55,0.265,1.55);
+        transition-delay: $i * 0.05s;
+      }
+    }
+  }
+  &:hover {
+    @include single-transition(all , 400ms , ease-in-out);
+    transform: translateY(-5px);
+    .team_img {
+      box-shadow: 0 0 42px rgba(0, 0, 0, 0.05);
+      &:before {
+        @include single-transition(all , 400ms , ease-in-out);
+        opacity: 1;
+      }
+      ul.team_social {
+        @include single-transition(all , 400ms , ease-in-out);
+        opacity: 1;
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px);
+      }
+    }
+    .team-member-links{
+      @for $i from 1 to 10 {
+        .icon-links a:nth-child(#{$i}) {
+          transform: translateY(0) scale(1);
+          -webkit-transition: all 800ms cubic-bezier(0.68,-0.55,0.265,1.55);
+          transition-delay: $i * 0.05s;
+        }
+      }
+    }
+  }
+
+
+}
+.teamSlider{
+  width: calc(100% - 90px);
+  margin: 0 auto;
+  @include tablet{
+    width:100%;
+    padding: 0 50px;
+  }
+}
+.teamSlider.owl-carousel .owl-nav{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 0;
+  button.owl-prev,button.owl-next{
+    background:$primary !important;
+    color: $light;
+    outline: 0 !important;
+    border: none!important;
+    padding: 3px 7px !important;
+    box-shadow: 0 0 0 !important;
+    width: 35px;
+    height:35px;
+    border-radius: 50px;
+    &:hover{
+      opacity: 0.9;
+    }
+  }
+  .owl-prev{
+    position: absolute;
+    top: calc( 50% - 40px);
+    left: -45px;
+    @include tablet{
+      left: 0;
+      z-index: 8;
+    }
+  }
+  .owl-next{
+    position: absolute;
+    top: calc( 50% - 40px);
+    right: -45px;
+    @include tablet{
+      right: 0;
+      z-index: 8;
+    }
+  }
+}
+.owl-carousel .owl-stage-outer{
+  z-index: 5;
+}

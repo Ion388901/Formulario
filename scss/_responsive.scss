@@ -1,0 +1,221 @@
+/* ===================================
+   Responsive
+====================================== */
+
+
+@media screen and (max-width: 991px) {
+    section {
+        padding: 80px 0;
+        overflow: hidden;
+    }
+
+    .header-with-topbar {
+        .top-header-area {
+            display: none;
+        }
+
+        .fixed-top {
+            top: 0;
+        }
+    }
+    .back-to-top.active,
+    .hero .down--btn{
+        display: none !important;
+    }
+
+    .menu {
+        width: 50%;
+        .menu-list {
+            width: 70%;
+            bottom: 12.5rem;
+        }
+    }
+
+    button.navbar-toggle {
+        background: transparent;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        font-size: 25px;
+    }
+
+  
+    
+
+}
+
+@media screen and (max-width: 768px) {
+ 
+    h1 {
+        font-size: 45px;
+        line-height: 45px;
+    }
+
+    h4 {
+        font-size: 28px;
+        line-height: 28px;
+    }
+
+
+    .col-video {
+        height: 370px;
+        padding: 49px;
+    }
+
+    .video-play-button {
+        top: initial;
+        right: 50%;
+        bottom: -62px;
+
+    }
+
+    .menu {
+        width: 100%;
+       
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+  
+    .testimonialbox-one {
+        padding: 0;
+    
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .logo {
+        img {
+            width: 95px;
+            height: 40px;
+            object-fit: cover;
+            object-position: -2% 50%;
+        }
+    }
+
+    .hero .content .home-left {
+        h1 {
+            font-size: 45px;
+            line-height: 50px;
+        }
+    }
+
+    .p-feature .feature-slider .feature-circle {
+        height: 380px;
+        width: 380px;
+    }
+
+    .b-features {
+        background-position: -325px;
+    }
+
+    .product-price {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        span {
+            margin-bottom: 10px;
+        }
+
+        a {
+            margin-left: 0 !important;
+        }
+    }
+
+    .p-feature .p-feature-content {
+        padding: 45px 15px;
+    }
+
+    .p-feature .collapse-feature {
+        cursor: pointer;
+        margin-bottom: 30px;
+
+        &>div {
+            flex-direction: column;
+        }
+    }
+
+    .unboxed .unboxed-content .number-content .number {
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+
+    .unboxed .unboxed-content .number-content span {
+        font-size: 16px;
+        text-align: center;
+        line-height: 33px;
+    }
+
+    .cart-wrapper .cart-item-wrapper {
+        right: -90px;
+        width: 250px;
+    }
+
+    .cart-wrapper .cart-item-wrapper .cart-product-content {
+        max-height: 130px;
+        overflow-y: auto;
+    }
+
+    .cart-wrapper .cart-item-wrapper .single-cart-item {
+        flex-direction: column;
+
+        .cart-img {
+            display: none;
+        }
+    }
+
+    .cart-wrapper .cart-item-wrapper .cart-product-content .single-cart-item .cart-text-btn .cart-text {
+        padding-left: 0;
+    }
+
+    .cart-wrapper .cart-item-wrapper .cart-product-content .single-cart-item .cart-text-btn .cart-text h5 {
+        font-size: 16px;
+        line-height: 20px;
+        padding-right: 25px;
+    }
+
+    .cart-wrapper .cart-item-wrapper .cart-price-total {
+        font-size: 16px;
+        line-height: 17px;
+        margin-bottom: 10px;
+        padding: 19px 20;
+
+        span {
+            top: 0;
+        }
+    }
+
+    .cart-links {
+        flex-direction: column;
+
+        a {
+            margin-right: 0 !important;
+            margin-bottom: 10px;
+        }
+    }
+
+    .b-features .b-features-content h3 {
+        font-size: 30px;
+        line-height: 35px;
+        color: #b51010;
+        background: linear-gradient(to right, #b51010 0%, #ac004b 100%);
+        background-clip: border-box;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: #b51010;
+    }
+
+    .shop .product-item {
+        margin-right: 35px;
+        margin-left: 0px;
+    }
+
+    .curve.curve-bottom {
+        left: 0;
+        bottom: -1px;
+        width: 100%;
+        display: none;
+    }
+}

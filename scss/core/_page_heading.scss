@@ -1,0 +1,32 @@
+.page_heading{
+  padding: 225px 0 150px 0;
+  text-align: center;
+  position: relative;
+  .overlay_dark{
+    background-color: rgba($black,.6);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  h2{
+    color: #FFFFFF;
+    margin: 0;
+    margin-bottom: 10px;
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
+  }
+  .heading_line{
+    width: 50px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    height: 2px;
+    border-radius: 5px;
+  }
+  p{
+    color: #f7f7f7;
+    margin-top: 15px;
+    font-size: 18px;
+  }
+}

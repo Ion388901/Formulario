@@ -1,0 +1,95 @@
+/* ===================================
+    Button
+====================================== */
+
+//
+// Button Sizes
+//
+.btn-lg {
+    font-size: 14px;
+    padding: 9px 34px;
+    line-height: 25px;
+}
+
+.btn-sm {
+    font-size: 11px;
+    padding: 4px 24px;
+}
+
+@each $color, $value in $colors {
+    .btn-#{$color} {
+        @include button-variant($value, $value);
+    }
+}
+
+@each $color, $value in $colors {
+    .btn-outline-#{$color} {
+        @include button-outline-variant($value, $value);
+    }
+}
+
+.btn i {
+    margin-left: 6px;
+    margin-right: 6px;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+}
+
+@each $color, $value in $colors {
+    .btn-transparent-#{$color} {
+        @include button-outline-variant($value);
+    }
+}
+
+/* button rounded */
+
+.btn.btn-rounded {
+    border-radius: 50px;
+}
+
+.btn-gradient {
+    color: $white !important;
+    @include gradient($primary, $secondary);
+    transition: 0.5s;
+
+    &:hover {
+        @include gradient($secondary, $primary);
+    }
+}
+
+.facebook:hover,
+.facebook-bg {
+    background: #4b6ea8 !important;
+    color: #ffffff !important;
+}
+.twitter:hover,
+.twitter-bg {
+    background: #4fd5f8 !important;
+    color: #ffffff !important;
+}
+.instagram:hover,
+.instagram-bg {
+    background: #d82950 !important;
+    color: #ffffff !important;
+}
+.pinterest:hover,
+.pinterest-bg {
+    background: #d83633 !important;
+    color: #ffffff !important;
+}
+.linkedin:hover,
+.linkedin-bg {
+    background: #0189c3 !important;
+    color: #ffffff !important;
+}
+.google-plus:hover,
+.google-plus-bg {
+    background: #da2200 !important;
+    color: #ffffff !important;
+}
+.flickr:hover,
+.flickr-bg {
+    background: #0063dc !important;
+    color: #fff !important;
+}

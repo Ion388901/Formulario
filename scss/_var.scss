@@ -1,0 +1,71 @@
+//
+// Color system
+//
+//
+$default: #265cdc !default;
+//
+$white: #fff !default;
+$black: #000 !default;
+$yellow: #f9f871 !default;
+$blue: #0081cf !default;
+$green: #008f7a !default;
+$red: #cb342b !default;
+$orange: #ff9671 !default;
+$transparent: transparent !default;
+
+//@at-root
+$primary: #265cdc !default;
+$secondary: #ff1637 !default;
+$dark: #343d48 !default;
+$light: #ffffff !default;
+$info: $blue !default;
+$danger: $red !default;
+$success: $green !default; //
+$gray: #f8f8f8 ;
+$extra-dark-gray: #231d2a !default;
+$dark-gray: #494251 !default;
+$extra-medium-gray: #939393 !default;
+$medium-gray: #a8a0b1 !default;
+
+//
+$extra-light-gray: #290a0a !default;
+$medium-light-gray: #ededed !default;
+$light-gray: #f9f9f9 !default;
+$very-light-gray: #f8f8f8 !default;
+
+//
+$text-geral: #555;
+$color-heading: #494251;
+$color-sub-heading: $text-geral;
+
+$body_color: #5c636c;
+//
+$nav-text-color: $text-geral;
+$colors: () !default;
+$gradient-primary: $primary,
+$secondary;
+// stylelint-disable-next-line scss/dollar-variable-default
+$colors: map-merge( ( "primary": $primary, "secondary": $secondary, "dark": $dark, "light": $light, "info": $info, "danger": $danger, "success": $success, "white": $white, "black": $black, "yellow": $yellow, "blue": $blue, "green": $green, "red": $red, "orange": $orange, "default": $default, "gray": $gray), $colors);
+// stylelint-disable-next-line scss/dollar-variable-default
+$bg-colors: map-merge( ( "primary": $primary, "secondary": $secondary, "dark": $dark, "light": $light, "info": $info, "danger": $danger, "success": $success, "white": $white, "black": $black, "yellow": $yellow, "blue": $blue, "green": $green, "red": $red, "orange": $orange, "extra-dark-gray": $extra-dark-gray, "dark-gray": $dark-gray, "extra-medium-gray": $extra-medium-gray, "medium-gray": $medium-gray, "extra-light-gray": $extra-light-gray, "medium-light-gray": $medium-light-gray, "light-gray": $light-gray, "very-light-gray": $very-light-gray, "default": $default, "gray": $gray), $colors);
+// stylelint-disable-next-line scss/dollar-variable-default
+$text-colors: map-merge( ( "primary": $primary, "secondary": $secondary, "dark": $dark, "light": $light, "info": $info, "danger": $danger, "success": $success, "white": $white, "black": $black, "yellow": $yellow, "blue": $blue, "green": $green, "red": $red, "orange": $orange, "extra-dark-gray": $extra-dark-gray, "dark-gray": $dark-gray, "extra-medium-gray": $extra-medium-gray, "medium-gray": $medium-gray, "extra-light-gray": $extra-light-gray, "medium-light-gray": $medium-light-gray, "light-gray": $light-gray, "very-light-gray": $very-light-gray, "default": $default, "gray": $gray), $colors);
+// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
+$yiq-contrasted-threshold: 150 !default;
+// Customize the light and dark text colors for use in our YIQ color contrast function.
+$yiq-text-dark: $extra-dark-gray !default;
+$yiq-text-light: $white !default;
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+$enable-caret: true !default;
+$enable-rounded: true !default;
+$enable-shadows: false !default;
+$enable-gradients: false !default;
+$enable-transitions: true !default;
+$enable-hover-media-query: false !default; // Deprecated, no longer affects any compiled CSS
+$enable-grid-classes: true !default;
+$enable-print-styles: true !default;
+//
+$f-font-path: "../fonts";
+

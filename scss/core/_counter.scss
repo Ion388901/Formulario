@@ -1,0 +1,86 @@
+/* ===================================
+   Counter
+====================================== */
+
+.counter-item {
+    cursor: pointer;
+    display: flex;
+    align-items: baseline;
+    .counter-value{
+        @include gradientText(); 
+        margin-right: 15px;
+        font-weight: 200;
+        font-size: 53px;
+    }
+    p{
+        color: $text-geral;
+        font-size: 18px;
+        font-weight: 600;
+        margin: 0;
+    }
+}
+
+
+
+.counter_box_one {
+    text-align: center;
+    margin: 20px 0;
+    i {
+      display: block;
+      line-height: 1;
+      font-size: 64px;
+      color: $light;
+    }
+    .counter {
+      font-size: 60px;
+      color: $secondary;
+      font-weight: 900;
+      margin: 0;
+      display: inline-block;
+      padding: 0 5px;
+      margin-top: 30px;
+      line-height: 1em;
+    }
+    h5 {
+      text-transform: capitalize;
+      margin: 0;
+      margin-top: 25px;
+      color: $black;
+    }
+  }
+  
+  
+  .counter_box_two {
+    text-align: center;
+    margin: 20px 0;
+    i {
+      display: block;
+      line-height: 1;
+      font-size: 48px;
+      color: #ffffff;
+      margin: 0 auto;
+      width: 90px;
+      height: 90px;
+      background-color: $primary;
+      padding: 20px 10px;
+      border-radius: 120px;
+      transition: all 0.3s ease-in-out;
+      border-bottom-right-radius: 10px;
+    }
+    .counter {
+      font-size: 60px;
+      color: $light;
+      font-weight: 900;
+      margin: 0;
+      display: inline-block;
+      padding: 0 5px;
+      margin-top: 30px;
+      line-height: 1em;
+    }
+    h5 {
+      text-transform: capitalize;
+      margin: 0;
+      margin-top: 25px;
+      color: $black;
+    }
+  }

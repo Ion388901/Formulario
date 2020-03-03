@@ -1,0 +1,114 @@
+// Utilities
+@import "mixins/hover";
+@import "mixins/text-emphasis";
+@import "mixins/transitions";
+// // Components
+@import "mixins/buttons";
+// // Skins
+@import "mixins/background-variant";
+// // Layout
+@import "mixins/drop-shadow-converter";
+
+
+
+// ----------------------------------------------------------------------
+//fonts
+// ----------------------------------------------------------------------
+$body_font: 'Roboto', sans-serif;
+$main_font: 'Roboto', sans-serif;
+
+
+
+
+// ----------------------------------------------------------------------
+//mix in
+// ----------------------------------------------------------------------
+// ----------------------------------------------------------------------
+// Transitions
+// example: @include single-transition(background, 1s, ease-in-out);
+// ----------------------------------------------------------------------
+@mixin single-transition($property, $duration, $timing-function) {
+  -webkit-transition: $property $duration $timing-function;
+  -moz-transition: $property $duration $timing-function;
+  -o-transition: $property $duration $timing-function;
+  transition: $property $duration $timing-function;
+}
+
+// ----------------------------------------------------------------------
+// Linear Gradient angle
+// example: @include linear-gradient( #cccccc, #333333);
+// ----------------------------------------------------------------------
+@mixin linear-gradient($colorStart, $colorStop){
+  background: #{$colorStart};
+  background: -webkit-linear-gradient(218deg,  #{$colorStart} 0%,#{$colorStop} 50%,#{$colorStart} 100%);
+  background:    -moz-linear-gradient(218deg,  #{$colorStart} 0%,#{$colorStop} 50%,#{$colorStart} 100%);
+  background:      -o-linear-gradient(218deg,  #{$colorStart} 0%,#{$colorStop} 50%,#{$colorStart} 100%);
+  background:     -ms-linear-gradient(218deg,  #{$colorStart} 0%,#{$colorStop} 50%,#{$colorStart} 100%);
+  background:         linear-gradient(218deg,  #{$colorStart} 0%,#{$colorStop} 50%,#{$colorStart} 100%);
+}
+
+// ----------------------------------------------------------------------
+// Box Shadow
+// example: @include box-shadow(1px, 2px, 2px, 2px, #000);
+// ----------------------------------------------------------------------
+@mixin box-shadow($hoff: false, $voff: false, $blur: false, $spread: false, $color: false){
+  -webkit-box-shadow: $hoff $voff $blur $spread $color;
+  -moz-box-shadow: $hoff $voff $blur $spread $color;
+  box-shadow: $hoff $voff $blur $spread $color;
+}
+
+
+// ----------------------------------------------------------------------
+// Media Queries
+// Devices Media Queries
+$special-phone: 667px;
+$special-tablet: 990px;
+
+// General Media Queries
+$phone-width: 768px;
+$tablet-width: 992px;
+$medium-width: 1024px;
+$notebook-width: 1280px;
+$desktop-width: 1600px;
+// ----------------------------------------------------------------------
+@mixin landscape-phone {
+  @media screen and (max-width: $special-phone) {
+    @content;
+  }
+}
+
+@mixin landscape-tablet {
+  @media only screen and (max-width: $special-tablet){
+    @content;
+  }
+}
+
+@mixin phone {
+  @media only screen and (max-width: $phone-width) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (max-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media only screen and (max-width: $medium-width) {
+    @content;
+  }
+}
+
+@mixin notebook {
+  @media only screen and (max-width: $notebook-width) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (max-width: $desktop-width) {
+    @content;
+  }
+}
